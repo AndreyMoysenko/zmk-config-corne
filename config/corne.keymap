@@ -45,6 +45,11 @@
             bindings = <&kp ENTER>;
             key-positions = <33 32>;
         };
+
+        combo_game {
+            bindings = <&tog 2>;
+            key-positions = <38 39>;
+        };
     };
 
     behaviors {
