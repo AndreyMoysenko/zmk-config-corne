@@ -12,17 +12,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_extra {
-            bindings = <&lt 3 K_MUTE>;
-            key-positions = <38 39>;
-            timeout-ms = <100>;
-            layers = <0>;
-            require-prior-idle-ms = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -44,19 +34,19 @@
 
         sumnav {
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND     &kp DOLLAR            &kp PERCENT              &kp CARET         &kp AMPERSAND      &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&kp TILDE  &trans           &kp PLUS     &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_CONTROL  &kp UP_ARROW          &kp NON_US_BACKSLASH   &trans
-&trans     &trans           &trans       &kp EQUAL     &kp MINUS             &kp UNDERSCORE           &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_ARROW     &kp DOWN_ARROW        &kp RIGHT              &trans
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND     &kp DOLLAR            &kp PERCENT              &kp CARET         &kp AMPERSAND      &kp ASTERISK    &kp K_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP
+&kp TILDE  &trans           &kp PLUS     &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp UNDERSCORE    &kp MINUS          &kp COLON       &kp UP_ARROW    &kp NON_US_BACKSLASH  &kp C_BRIGHTNESS_INC
+&trans     &trans           &kp CARET    &kp EQUAL     &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT             &kp C_BRIGHTNESS_DEC
                                          &trans        &trans                &none                    &trans            &kp CAPSLOCK       &trans
             >;
         };
 
         numnav {
             bindings = <
-&kp PAGE_UP    &kp STAR   &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp F1             &kp F2           &kp F3                &kp F4                &kp F5    &kp F6
-&kp PAGE_DOWN  &kp SLASH  &kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp F7             &kp F8           &kp F9                &kp F10               &kp F11   &kp F12
-&kp END        &kp CARET  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp HOME  &kp INSERT
-                                     &trans        &trans        &trans          &none              &trans           &trans
+&kp PAGE_UP    &kp STAR   &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp F1  &kp F2  &kp F3  &kp F4   &kp F5    &kp F6
+&kp PAGE_DOWN  &kp SLASH  &kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11   &kp F12
+&kp END        &kp CARET  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans  &trans  &trans  &trans   &kp HOME  &kp INSERT
+                                     &trans        &trans        &trans          &none   &trans  &trans
             >;
         };
 
